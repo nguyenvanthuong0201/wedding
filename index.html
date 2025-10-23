@@ -26,6 +26,10 @@
         },
       };
     </script>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='%23e0c9c9' d='M50 90S10 60 10 30a20 20 0 0 1 40 0 20 20 0 0 1 40 0c0 30-40 60-40 60z'/></svg>"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -359,7 +363,7 @@
       id="hero"
       class="relative min-h-screen flex items-center justify-center overflow-hidden"
       style="
-        background-image: url('/asset/banner.jpg');
+        background-image: url('./asset/banner.jpg');
         background-size: cover;
         background-position: center;
       "
@@ -416,7 +420,7 @@
             style="animation-delay: 0.2s"
           >
             <img
-              src="/asset/na9.jpg"
+              src="./asset/na9.jpg"
               alt="Groom"
               loading="lazy"
               class="w-full h-auto object-cover"
@@ -448,8 +452,8 @@
             style="animation-delay: 0.4s"
           >
             <img
-            loading="lazy"
-              src="/asset/n9.jpg"
+              loading="lazy"
+              src="./asset/n9.jpg"
               alt="Bride"
               class="w-full h-auto object-cover"
             />
@@ -699,7 +703,7 @@
             style="animation-delay: 0.2s"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src="./asset/1.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
             />
@@ -711,7 +715,7 @@
             style="animation-delay: 0.4s"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src="./asset/2.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
             />
@@ -723,7 +727,7 @@
             style="animation-delay: 0.6s"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src="./asset/3.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
             />
@@ -735,7 +739,7 @@
             style="animation-delay: 0.8s"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src="./asset/4.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
             />
@@ -744,10 +748,10 @@
             href="./asset/5.jpg"
             class="glightbox animate-slideUp"
             data-gallery="wedding-gallery"
-            style="animation-delay: 0.10s"
+            style="animation-delay: 0.1s"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src="./asset/5.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
             />
@@ -759,7 +763,7 @@
             style="animation-delay: 0.12s"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src="./asset/6.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
             />
@@ -771,7 +775,7 @@
             style="animation-delay: 0.14s"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src="./asset/7.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
             />
@@ -783,7 +787,7 @@
             style="animation-delay: 0.16s"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src="./asset/8.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
             />
@@ -795,7 +799,7 @@
             style="animation-delay: 0.18s"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src="./asset/9.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
             />
@@ -967,7 +971,7 @@
 
           <div class="bg-white p-6 text-center">
             <h3 class="text-2xl text-gray-700 mb-2">
-              Nhà hàng Tiệc Cưới Champa Island 
+              Nhà hàng Tiệc Cưới Champa Island
             </h3>
             <p class="text-gray-600 mb-4">
               304 2/4, Vĩnh Phước, Nha Trang, Khánh Hòa
@@ -1002,7 +1006,7 @@
         <div class="flex justify-center space-x-4 mb-8">
           <a
             href="https://www.facebook.com/pham.nien.3958"
-            class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 "
+            class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-all duration-300"
           >
             <i class="ri-facebook-fill text-white"></i>
           </a>
@@ -1014,7 +1018,7 @@
           </a>
           <a
             href="https://www.facebook.com/duong.hai.nhat.2024"
-            class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 "
+            class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-all duration-300"
           >
             <i class="ri-facebook-fill text-white"></i>
           </a>
@@ -1026,11 +1030,8 @@
     </footer>
 
     <!-- Audio Element -->
-    <audio id="background-music" loop preload="auto">
-      <source
-        src="./asset/music.mp3"
-        type="audio/mpeg"
-      />
+    <audio id="background-music" loop>
+      <source src="./asset/music.mp3" type="audio/mpeg" />
     </audio>
 
     <!-- Scripts -->
