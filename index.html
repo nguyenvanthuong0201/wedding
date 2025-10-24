@@ -424,7 +424,7 @@
               src="./asset/na9.jpg"
               alt="Groom"
               class="w-full h-auto object-cover"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </div>
 
@@ -456,7 +456,7 @@
               src="./asset/n9.jpg"
               alt="Bride"
               class="w-full h-auto object-cover"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </div>
         </div>
@@ -706,7 +706,7 @@
             <img
               src="./asset/1.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </a>
           <a
@@ -718,7 +718,7 @@
             <img
               src="./asset/2.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </a>
           <a
@@ -730,7 +730,7 @@
             <img
               src="./asset/3.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </a>
           <a
@@ -742,7 +742,7 @@
             <img
               src="./asset/4.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </a>
           <a
@@ -754,7 +754,7 @@
             <img
               src="./asset/5.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </a>
           <a
@@ -766,7 +766,7 @@
             <img
               src="./asset/6.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </a>
           <a
@@ -778,7 +778,7 @@
             <img
               src="./asset/7.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </a>
           <a
@@ -790,7 +790,7 @@
             <img
               src="./asset/8.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </a>
           <a
@@ -802,7 +802,7 @@
             <img
               src="./asset/9.jpg"
               class="w-full h-96 object-cover rounded-lg shadow-lg hover:scale-105 transition"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </a>
         </div>
@@ -966,7 +966,7 @@
             height="450"
             style="border: 0"
             allowfullscreen=""
-            loading="lazy"
+            loading="lazy" decoding="async"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
 
@@ -1213,54 +1213,29 @@
     </script>
 
     <script id="scroll-animation-script" defer>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href");
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-              window.scrollTo({
-                top: targetElement.offsetTop - 80, // Adjust for fixed header
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-
-        // Reveal animations on scroll
+        document.addEventListener("DOMContentLoaded", function () {
         const revealElements = document.querySelectorAll(".animate-slideUp");
 
-        function checkReveal() {
-          const windowHeight = window.innerHeight;
-          const revealPoint = 150;
+        const observer = new IntersectionObserver(
+            (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                observer.unobserve(entry.target);
+                }
+            });
+            },
+            { threshold: 0.1 }
+        );
 
-          revealElements.forEach((element) => {
-            const revealTop = element.getBoundingClientRect().top;
-
-            if (revealTop < windowHeight - revealPoint) {
-              element.style.opacity = "1";
-              element.style.transform = "translateY(0)";
-            }
-          });
-        }
-
-        // Initialize elements
-        revealElements.forEach((element) => {
-          element.style.opacity = "0";
-          element.style.transform = "translateY(50px)";
-          element.style.transition = "all 0.8s ease";
+        revealElements.forEach((el) => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(50px)";
+            el.style.transition = "all 0.8s ease-out";
+            observer.observe(el);
         });
-
-        // Check on load
-        checkReveal();
-
-        // Check on scroll
-        window.addEventListener("scroll", checkReveal);
-      });
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
