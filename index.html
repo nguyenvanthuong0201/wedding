@@ -23,7 +23,7 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: { primary: "#8a9db0", secondary: "#e0c9c9" },
+            colors: { primary: "#950600", secondary: "#950600", gray:{50: "#f6ebdf",100: "#f6ebdf",} },
             borderRadius: {
               none: "0px",
               sm: "4px",
@@ -268,7 +268,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(180deg, #fff0f6, #ffe6f0);
+        background: #f6ebdf;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -284,7 +284,7 @@
 
       .spinner {
         border: 5px solid #ffd6e7;
-        border-top: 5px solid #ff4d8d;
+        border-top: 5px solid #950600;
         border-radius: 50%;
         width: 60px;
         height: 60px;
@@ -304,7 +304,7 @@
       .loading-text {
         font-family: "Dancing Script", cursive;
         font-size: 1.3rem;
-        color: #e91e63;
+        color: #950600;
         text-align: center;
         font-weight: 600;
         animation: fadeIn 1.5s ease-in-out infinite alternate;
@@ -323,13 +323,13 @@
       .heart {
         position: fixed;
         top: -10px;
-        color: #ff4d8d;
+        color: #950600;
         font-size: 20px;
         animation: fall linear infinite;
         opacity: 0.9;
         pointer-events: none;
         z-index: 100;
-        filter: drop-shadow(0 0 3px rgba(255, 77, 141, 0.8));
+        filter: #950600;
       }
 
       @keyframes fall {
@@ -363,7 +363,7 @@
       }
     </style>
   </head>
-  <body class="bg-white overflow-x-hidden scroll-smooth">
+  <body class="overflow-x-hidden scroll-smooth" style="background-color: #f6ebdf;">
     <div class="cursor-effect hidden md:block"></div>
     <!-- Sparkles -->
     <div id="sparkles-container"></div>
@@ -489,11 +489,9 @@
           class="text-center text-gray-600 leading-relaxed mb-12 animate-slideUp"
           style="animation-delay: 0.3s"
         >
-          Thật vui vì được gặp và đón tiếp các bạn trong một dịp đặc biệt như
-          đám cưới của chúng tôi. Chúng tôi muốn gửi đến bạn những lời cảm ơn
-          sâu sắc nhất và để bạn biết chúng tôi rất hạnh phúc khi thấy bạn ở đó.
-          Cảm ơn các bạn rất nhiều về sự hiện diện cùng những lời chúc tốt đẹp
-          mà bạn đã dành cho chúng tôi!
+        Tụi mình thật sự rất hạnh phúc khi nghĩ đến việc được đón tiếp mọi người trong ngày trọng đại sắp tới. Trong suốt hành trình bên nhau, tụi mình luôn cảm nhận được tình yêu thương, sự đồng hành và sẻ chia từ gia đình, bạn bè – và chính điều đó khiến ngày cưới này trở nên thật ý nghĩa.
+        Và giờ đây, mọi điều sẽ trở nên trọn vẹn hơn khi có sự hiện diện, chúc phúc và chung vui của mọi người trong buổi lễ này - khoảnh khắc đánh dấu một chặng đường mới của tụi mình.
+        Cảm ơn mọi người đã luôn bên cạnh, thương yêu và cùng tụi mình viết nên kỷ niệm này. Mong được gặp tất cả mọi người vào ngày vui sắp tới!
         </p>
       </div>
     </section>
@@ -575,11 +573,10 @@
               style="animation-delay: 0.2s"
             >
               <h3 class="text-2xl text-primary mb-2">Lần Đầu Gặp Gỡ</h3>
-              <p class="text-gray-500 mb-2">Tháng 6, 2020</p>
+              <p class="text-gray-500 mb-2">Tháng 12, 2017</p>
               <p class="text-gray-600">
-                Chúng tôi gặp nhau lần đầu tiên tại một buổi tiệc của người bạn
-                chung. Từ ánh nhìn đầu tiên, chúng tôi đã cảm thấy có điều gì đó
-                đặc biệt.
+                Không thích nhau ngay từ lần đầu gặp —  <span class="text-primary">“nhìn mặt thấy ghét”</span> chắc là cảm giác của cả hai.
+                Tính quen chơi qua đường mà chắc đường này đường ... quốc lộ. 
               </p>
             </div>
             <div
@@ -607,10 +604,10 @@
               style="animation-delay: 0.3s"
             >
               <h3 class="text-2xl text-primary mb-2">Bắt Đầu Hẹn Hò</h3>
-              <p class="text-gray-500 mb-2">Tháng 9, 2020</p>
+              <p class="text-gray-500 mb-2">Tháng 3, 2018</p>
               <p class="text-gray-600">
-                Sau vài tháng trò chuyện và tìm hiểu, chúng tôi quyết định bắt
-                đầu mối quan hệ nghiêm túc và chính thức hẹn hò.
+                Chọn đúng thời điểm cuối tháng 3 – đầu tháng 4 để tỏ tình, vì lỡ có bị từ chối thì còn kịp chữa quê bằng câu <span class="text-primary">“nay cá tháng Tư mà em!”</span>.
+                Một pha tính trước đường lui … nhưng may mắn thay, người ấy không nói không!
               </p>
             </div>
           </div>
@@ -632,11 +629,10 @@
               <h3 class="text-2xl text-primary mb-2">
                 Chuyến Du Lịch Đầu Tiên
               </h3>
-              <p class="text-gray-500 mb-2">Tháng 3, 2021</p>
+              <p class="text-gray-500 mb-2">Đà Lạt – 2020</p>
               <p class="text-gray-600">
-                Chúng tôi có chuyến du lịch đầu tiên cùng nhau đến Đà Lạt. Những
-                kỷ niệm tuyệt vời đã giúp chúng tôi hiểu nhau hơn và càng thêm
-                gắn bó.
+                Chuyến đi đầu tiên cùng nhau — và có lẽ cũng là chuyến mà hai đứa mới quyết định đồng hành lâu dài với nhau.
+                Sau những ngày rong ruổi giữa trời Đà Lạt, cùng cà phê sáng và những cơn mưa chiều, tụi mình nhận ra… <span class="text-primary">“à, chắc là đi chung đường thiệt rồi đó.”</span> Chứ khúc trước còn tưởng <span class="text-primary">"quen dỡn"</span> !!
               </p>
             </div>
             <div
@@ -664,10 +660,10 @@
               style="animation-delay: 0.5s"
             >
               <h3 class="text-2xl text-primary mb-2">Lời Cầu Hôn</h3>
-              <p class="text-gray-500 mb-2">Tháng 12, 2023</p>
               <p class="text-gray-600">
-                Trong một buổi tối lãng mạn với ánh nến và hoa hồng, Văn Niên đã
-                quỳ gối và cầu hôn Hải Nhật. Và dĩ nhiên, cô ấy đã nói "Có"!
+                  Không có một lời cầu hôn chính thức nào hết!
+                  Người đàn ông này đúng là <span class="text-primary">“tệ bạcccccccccc”</span> — chẳng nến, chẳng hoa, chẳng màn quỳ gối nào.
+                  Có khi đây là một âm mưu đám cưới được dàn dựng tinh vi để khởi nghiệp cũng nên!?
               </p>
             </div>
           </div>
@@ -687,11 +683,11 @@
               style="animation-delay: 0.6s"
             >
               <h3 class="text-2xl text-primary mb-2">Ngày Cưới</h3>
-              <p class="text-gray-500 mb-2">04 Tháng 4, 2024</p>
+              <p class="text-gray-500 mb-2">01 Tháng 11, 2025</p>
               <p class="text-gray-600">
-                Và giờ đây, chúng tôi sẽ bước vào hành trình mới của cuộc đời.
-                Chúng tôi rất vui khi được chia sẻ khoảnh khắc đặc biệt này với
-                bạn!
+                Và giờ đây, tụi mình chính thức bước vào hành trình mới — hành trình của hai người, nhưng có sự chứng kiến và chúc phúc của tất cả những người thân yêu.
+                Rất mong được đón nhận sự hiện diện của mọi người trong ngày đặc biệt này,
+                để niềm vui của tụi mình thêm trọn vẹn và đáng nhớ hơn bao giờ hế
               </p>
             </div>
             <div
